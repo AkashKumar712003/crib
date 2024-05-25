@@ -1,0 +1,11 @@
+.filter{
+    filter: invert(1);
+}
+.flex{
+    display: flex;
+}
+.border{
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 20px;
+}

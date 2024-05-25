@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="x-icon" href="/static/images/crib-high-resolution-logo-black-transparent.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crib: India's first plagiarism Checker</title>
+
+    <link rel="stylesheet" type="text/css" href="{{  url_for('static' , filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{  url_for('static' , filename='utility.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="flex navleft">
+                <img src="/static/images/crib-high-resolution-logo-black-transparent.png" alt="">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#contactus">Contact us</a></li>
+                    <li><a href="#tryit">Try it</a></li>
+                </ul>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+        <div class="crads">
+            <div id="home" class="card1 section">
+                <div>
+                    <div class="incard1 flex">
+                        <div class="leftcard1">
+                            <p>Crib: The </p>
+                            <p> Plagiarism</p>
+                            <p> Checker</p>
+
+                        </div>
+                        <div class="rightcard1">
+                            <img src="/static/images/front.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomcard1">Empowering you to ensure originality and integrity in your work. Get started
+                    today!
+                </div>
+                <div class="crad1buttons">
+                    <button>Sign In</button>
+                    <button><a style="text-decoration: none;"
+                            href="https://www.scribbr.com/plagiarism/how-do-plagiarism-checkers-work/">learn
+                            more</a></button>
+                </div>
+            </div>
+            <div class="card2 section">
+                <div class="leftcard2">
+                    <p class="firstp">About crib</p>
+                    <div class="insidecard2">
+                        <div class="mission">
+                            <p class="secondp">Mission</p>
+                            Empower writers to uphold originality and creativity.
+                        </div>
+                        <div class="vision">
+                            <p class="thirdp">Vision</p>
+                            Become the go-to platform for plagiarism detection.
+                        </div>
+                    </div>
+                </div>
+                <div class="rightcard2">
+                    <img src="/static/images/business-idea-3683781_640.jpg" alt="">
+                </div>
+            </div>
+            <div class="card3 section">
+                <p class="firstp">How crib works</p>
+                <div class="insidecard3">
+                    <div class="submission border">
+                        <p>Submission</p>
+                        Upload your content securely to start the detection process.
+                    </div>
+                    <div class="analysis border">
+                        <p>Analysis</p>
+                        Advanced algorithms provide a thorough and rapid scan of your work.
+                    </div>
+                    <div class="results border">
+                        <p>Results</p>
+                        Receive detailed reports outlining any potential instances of plagiarism.
+                    </div>
+                </div>
+
+            </div>
+            <div class="card4 section">
+                <div>
+                    <p class="firstp">Keyfeatures of Crib</p>
+                    <div class="threeboxes">
+                        <div class="twoboxes">
+                            <div class="firstbox">
+                                <p>Advanced Scanning</p>Utilizes cutting-edge technology for comprehensive analysis.
+                            </div>
+                            <div class="secondbox">
+                                <p>Interactive Dashboard</p>Easy-to-navigate interface providing actionable insights.
+                            </div>
+                        </div>
+                        <div class="thirdbox">
+                            <p>Custom Alerts</p>
+                            Receive notifications tailored to your specific preferences.
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img height="" src="/static/images/plagiarism-report.png" alt="">
+                </div>
+
+
+
+            </div>
+            <div id="tryit" class="card5 section">
+                <div class="first">Try it yourself</div>
+                <div class="second">
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="insertleft">
+                            <p> Insertfile-1</p>
+                            <label for="forfile1"> <img for="forfile1" src="/static/images/file.png" alt=""></label>
+                            <!-- <img for="forfile1" src="file.png" alt=""> -->
+                            <input id="forfile1" type="file" name="file1" accept=".txt" style="display: none;">
+                        </div>
+                        <div class="inbtw">
+
+                            <label for="submitfile"> <button>Compare</button></label>
+                            <input id="submitfile" type="submit" value="Submit" style="display: none;">
+
+                        </div>
+                        <div class="insertright">
+                            <p> Insertfile-2</p>
+                            <label for="forfile2"> <img for="forfile1" src="/static/images/file.png" alt=""></label>
+                            <input id="forfile2" type="file" name="file2" accept=".txt" style="display: none;">
+
+                            <!-- <img src="file.png" alt=""> -->
+                        </div>
+                    </form>
+
+                </div>
+                <div class="third">
+                    {% if similarity %}
+                    <h2>Similarity Score: {{ similarity}} %</h2>
+                    {% endif %}
+                </div>
+
+            </div>
+            <div id="contactus" class="card6 section">
+                <div class="logo"> <img fill="#ffffff"
+                        src="static/images/crib-high-resolution-logo-black-transparent.png" alt=""></div>
+                <div class="contributor">
+                    <h3> Our Contributors:</h3>
+                    <ul>
+                        <li class="akash">
+                            <a href="https://www.linkedin.com/in/akash-kumar-0a7a02258/"><img
+                                    src="/static/images/akash2.jpg" alt=""></a>
+                            <P>Akash kumar</P>
+                        </li>
+                        <li class="gaurav">
+                            <a href="https://www.linkedin.com/in/gaurav-saini-a20355261/"> <img src="/static/images/gaurav.jpg" alt=""></a>
+                           
+                            <p> Gaurav Saini</p>
+                        </li>
+                        <!-- <li class="saurabh">
+                            <a href="https://www.linkedin.com/in/saurabh-kumar-589a29278">
+                                <img src="static/images/saurabh.jpg" alt="">
+                            </a>
+                            
+                            <p>Saurabh kumar</p>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="projectunder">
+                    <h3>Project Supervisor:</h3>
+                    <a href="https://scholar.google.com/citations?user=beUxZwwAAAAJ&hl=en&oi=ao"><img src="/static/images/profile-2398782_1280.png" alt=""></a>
+                    <p>Professor: Dr. Jairam Meena </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
